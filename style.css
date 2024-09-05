@@ -22,22 +22,23 @@ body {
 /* Styles */
 body {
     display: grid;
-    grid-template: clamp(150px, 15%, 200px) auto / clamp(150px, 20%, 200px) auto;
+    grid-template: 1fr 4fr / 1fr 5fr;
     font-family: Arial, Helvetica, sans-serif;    
 }
 
 aside {
     background-color: #0ea5e9;
     grid-row: 1 / -1;
-    padding: 16px;
+    padding: 12px;
 }
 
 header {
     background-color: white;
     display: grid;
-    grid-template: 40% 60% / 60% 40%;
+    grid-template: 2fr 3fr / 3fr 2fr;
     align-items: center;
-    padding-left: 32px;
+    padding: 12px 32px;
+    gap: 12px 0px;
 }
 
 .profile-picture {
@@ -62,7 +63,7 @@ header {
 
 .welcome {
     display: grid;
-    grid-template: auto auto / 60px auto;
+    grid-template: 2fr 3fr / 60px auto;
     align-content: center;
 }
 
@@ -89,15 +90,15 @@ header {
     width: 90px;
     height: 40px;
     border-radius: 32px;
-    margin: 0px 12px;
+    margin: 0px 10px;
 }
 
 main {
     background-color: lightgray;
     display: grid;
-    grid-template: 60% 40% / 69% 29%;
-    gap: 16px;
-    padding: 16px;
+    grid-template: auto auto / 7fr 3fr;
+    gap: 12px;
+    padding: 12px;
     justify-content: center;
 }
 
@@ -106,12 +107,12 @@ main {
 }
 
  main h1 {
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 }
 
 div.projects { 
     display: grid;
-    grid-template: repeat(3, calc(82% / 3)) / 48% 48%;
+    grid-template: repeat(3, 1fr) / 1fr 1fr;
     gap: 16px;
 }
 
@@ -125,11 +126,12 @@ div.projects {
 
 .announcements, .trending {
     background-color: white;
+    border-radius: 8px;
 }
 
 .upload {
     display: grid;
-    grid-template: 50% 50% / 40px auto;
+    grid-template: 1fr 1fr / 40px auto;
 }
 
 .upload .profile-picture {
@@ -165,4 +167,12 @@ main .project {
 
 .announcement {
     margin: 12px 0px;
+}
+
+.trending {
+    padding: 12px;
+}
+
+.upload {
+    padding: 8px 0px;
 }
